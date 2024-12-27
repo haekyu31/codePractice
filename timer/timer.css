@@ -30,6 +30,15 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 5px;
+}
+
+#resetButton {
+    background-color: #dc3545;
+}
+
+#resetButton:hover {
+    background-color: #c82333;
 }
 
 button:hover {
