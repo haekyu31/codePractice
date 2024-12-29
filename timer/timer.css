@@ -9,12 +9,26 @@ body {
 }
 
 .timer-container {
-    text-align: center;
-    background: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+}
+
+.timer-controls {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.lap-list {
+    flex: 1;
+    max-height: 400px;
+    overflow-y: auto;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
 }
 
 #timer {
@@ -41,6 +55,10 @@ button {
     background-color: #c82333;
 }
 
-button:hover {
-    background-color: #0056b3;
+#startButton:hover {
+    background-color: var(--hover-color, #0056b3);
+}
+
+#startButton[data-state="stop"]:hover {
+    --hover-color: #c82333;
 }
